@@ -21,7 +21,7 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 #server=app.server
 
 
-data11=pd.read_csv("/home/sagar/data1.csv")
+data11=pd.read_csv("/home/sagar/pythonanywhere/data1.csv")
 sensordata1_daily = data11.set_index('GMTDATE_GMTTIME')
 
 temp_Kitchen=(sensordata1_daily[sensordata1_daily["LOCATION"]=="Kitchen"].loc['2020-10-14 00:00:00':'2020-10-31 23:59:59', 'TEMPR']).copy()
